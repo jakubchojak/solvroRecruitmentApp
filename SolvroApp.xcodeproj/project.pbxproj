@@ -38,6 +38,7 @@
 		AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerContainer.swift; sourceTree = "<group>"; };
 		AFBB2B5729C9C28200F77185 /* FinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderView.swift; sourceTree = "<group>"; };
 		AFBB2B5B29CA39B500F77185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AFBB2B5C29CA3C8800F77185 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		AFBB2B2729C8E7E900F77185 = {
 			isa = PBXGroup;
 			children = (
+				AFBB2B5C29CA3C8800F77185 /* README.md */,
 				AFBB2B3229C8E7E900F77185 /* SolvroApp */,
 				AFBB2B3129C8E7E900F77185 /* Products */,
 			);
