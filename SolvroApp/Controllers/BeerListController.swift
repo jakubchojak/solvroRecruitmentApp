@@ -7,7 +7,7 @@
 
 import Foundation
 
-var allBeers = [BeerContainer]()
+var likedBeersIDs = loadLikedBeersFromDisk()
 
 func loadBeersFromAPI() async -> [Beer]? {
     guard let baseURL = URL(string: "https://api.punkapi.com/v2/beers/") else { return nil }
@@ -26,23 +26,50 @@ func loadBeersFromAPI() async -> [Beer]? {
     return beersFetched
 }
 
-func hasItem(beerContainerList: [BeerContainer], beer: Beer) -> Bool {
-    
-    for item in beerContainerList {
-        if item.beer.isEqual(beer: beer) {
-            return true
-        }
-    }
-    
-    return false
-}
-
-func getLikedBeers() -> [Beer] {
+func getLikedBeers() async -> [Beer] {
     var toReturn = [Beer]()
-    for beer in allBeers {
-        if beer.liked {
-            toReturn.append(beer.beer)
+    let allBeers = await loadBeersFromAPI()
+    for beer in allBeers ?? [Beer]() {
+        if likedBeersIDs.contains(beer.id) {
+            toReturn.append(beer)
         }
     }
     return toReturn
+}
+
+func loadLikedBeersFromDisk() -> [Int] {
+    var likedBeers = [Int]()
+    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    let filePath = path.appending(path: "likedBeerIDs.txt")
+    
+    do {
+        let ids = try String(contentsOf: filePath, encoding: .utf8)
+        let splittedIDs = ids.split(separator: ";")
+        for id in splittedIDs {
+            likedBeers.append(Int(id) ?? 0)
+        }
+    } catch {
+        print(error.localizedDescription)
+    }
+    return likedBeers
+}
+
+func saveLikedBeersToDisk() {
+    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    let filePath = path.appending(path: "likedBeerIDs.txt")
+    
+    do {
+        try prepareIDsToWrite().write(to: filePath, atomically: true, encoding: .utf8)
+    } catch {
+        print(error.localizedDescription)
+    }
+    
+}
+
+func prepareIDsToWrite() -> String {
+    var preparedString = ""
+    for id in likedBeersIDs {
+        preparedString += "\(id);"
+    }
+    return preparedString
 }

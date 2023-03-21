@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct SolvroAppApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

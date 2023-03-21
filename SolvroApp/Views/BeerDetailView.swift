@@ -30,21 +30,25 @@ struct BeerDetailView: View {
             }
         }
         .onAppear {
-            self.isLiked = hasItem(beerContainerList: allBeers, beer: beer)
+            if likedBeersIDs.contains(self.beer.id) {
+                self.isLiked = true
+            }
+            else {
+                self.isLiked = false
+            }
+        }
+        .onDisappear {
+            saveLikedBeersToDisk()
         }
         .toolbar {
             ToolbarItem {
                 Button {
                     isLiked.toggle()
-                    if !hasItem(beerContainerList: allBeers, beer: self.beer) {
-                        allBeers.append(BeerContainer(beer: self.beer, liked: true))
+                    if (!likedBeersIDs.contains(self.beer.id)) {
+                        likedBeersIDs.append(self.beer.id)
                     }
                     else {
-                        for (idx, _) in allBeers.enumerated() {
-                            if allBeers[idx].beer.isEqual(beer: self.beer) {
-                                allBeers[idx].liked.toggle()
-                            }
-                        }
+                        likedBeersIDs.remove(at: likedBeersIDs.firstIndex(of: self.beer.id)!)
                     }
                 } label: {
                     if isLiked {

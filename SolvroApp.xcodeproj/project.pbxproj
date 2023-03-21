@@ -19,6 +19,7 @@
 		AFBB2B4F29C8F2DD00F77185 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4E29C8F2DD00F77185 /* BeerDetailView.swift */; };
 		AFBB2B5229C8F40500F77185 /* BeerListItemSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */; };
 		AFBB2B5629C8FF1B00F77185 /* BeerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */; };
+		AFBB2B5829C9C28200F77185 /* FinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B5729C9C28200F77185 /* FinderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		AFBB2B4E29C8F2DD00F77185 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
 		AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListItemSubView.swift; sourceTree = "<group>"; };
 		AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerContainer.swift; sourceTree = "<group>"; };
+		AFBB2B5729C9C28200F77185 /* FinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderView.swift; sourceTree = "<group>"; };
+		AFBB2B5B29CA39B500F77185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 		AFBB2B3229C8E7E900F77185 /* SolvroApp */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB2B5B29CA39B500F77185 /* Info.plist */,
 				AFBB2B4329C8E92A00F77185 /* Controllers */,
 				AFBB2B4229C8E91F00F77185 /* Models */,
 				AFBB2B4129C8E91400F77185 /* Views */,
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */,
+				AFBB2B5729C9C28200F77185 /* FinderView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			files = (
 				AFBB2B4D29C8ECF300F77185 /* BeerListController.swift in Sources */,
 				AFBB2B4929C8EA5A00F77185 /* SettingsView.swift in Sources */,
+				AFBB2B5829C9C28200F77185 /* FinderView.swift in Sources */,
 				AFBB2B4B29C8EC3200F77185 /* Beer.swift in Sources */,
 				AFBB2B5629C8FF1B00F77185 /* BeerContainer.swift in Sources */,
 				AFBB2B4F29C8F2DD00F77185 /* BeerDetailView.swift in Sources */,
@@ -328,17 +334,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SolvroApp/Preview Content\"";
 				DEVELOPMENT_TEAM = FFX3AHD54N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolvroApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SolvroApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,9 +355,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jc.SolvroApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -357,17 +369,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SolvroApp/Preview Content\"";
 				DEVELOPMENT_TEAM = FFX3AHD54N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolvroApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SolvroApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,9 +390,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jc.SolvroApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
