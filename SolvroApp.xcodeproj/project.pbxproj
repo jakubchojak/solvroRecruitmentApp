@@ -11,6 +11,14 @@
 		AFBB2B3629C8E7E900F77185 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B3529C8E7E900F77185 /* ContentView.swift */; };
 		AFBB2B3829C8E7EA00F77185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBB2B3729C8E7EA00F77185 /* Assets.xcassets */; };
 		AFBB2B3B29C8E7EA00F77185 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBB2B3A29C8E7EA00F77185 /* Preview Assets.xcassets */; };
+		AFBB2B4529C8E98A00F77185 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4429C8E98A00F77185 /* BeerListView.swift */; };
+		AFBB2B4729C8EA1400F77185 /* LikedBeersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4629C8EA1400F77185 /* LikedBeersView.swift */; };
+		AFBB2B4929C8EA5A00F77185 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4829C8EA5A00F77185 /* SettingsView.swift */; };
+		AFBB2B4B29C8EC3200F77185 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4A29C8EC3200F77185 /* Beer.swift */; };
+		AFBB2B4D29C8ECF300F77185 /* BeerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4C29C8ECF300F77185 /* BeerListController.swift */; };
+		AFBB2B4F29C8F2DD00F77185 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B4E29C8F2DD00F77185 /* BeerDetailView.swift */; };
+		AFBB2B5229C8F40500F77185 /* BeerListItemSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */; };
+		AFBB2B5629C8FF1B00F77185 /* BeerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		AFBB2B3529C8E7E900F77185 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFBB2B3729C8E7EA00F77185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBB2B3A29C8E7EA00F77185 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFBB2B4429C8E98A00F77185 /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
+		AFBB2B4629C8EA1400F77185 /* LikedBeersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedBeersView.swift; sourceTree = "<group>"; };
+		AFBB2B4829C8EA5A00F77185 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AFBB2B4A29C8EC3200F77185 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		AFBB2B4C29C8ECF300F77185 /* BeerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListController.swift; sourceTree = "<group>"; };
+		AFBB2B4E29C8F2DD00F77185 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
+		AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListItemSubView.swift; sourceTree = "<group>"; };
+		AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,10 @@
 		AFBB2B3229C8E7E900F77185 /* SolvroApp */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB2B4329C8E92A00F77185 /* Controllers */,
+				AFBB2B4229C8E91F00F77185 /* Models */,
+				AFBB2B4129C8E91400F77185 /* Views */,
 				AFBB2B3329C8E7E900F77185 /* SolvroAppApp.swift */,
-				AFBB2B3529C8E7E900F77185 /* ContentView.swift */,
 				AFBB2B3729C8E7EA00F77185 /* Assets.xcassets */,
 				AFBB2B3929C8E7EA00F77185 /* Preview Content */,
 			);
@@ -65,6 +83,44 @@
 				AFBB2B3A29C8E7EA00F77185 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AFBB2B4129C8E91400F77185 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB2B5029C8F3F200F77185 /* SubViews */,
+				AFBB2B3529C8E7E900F77185 /* ContentView.swift */,
+				AFBB2B4429C8E98A00F77185 /* BeerListView.swift */,
+				AFBB2B4629C8EA1400F77185 /* LikedBeersView.swift */,
+				AFBB2B4829C8EA5A00F77185 /* SettingsView.swift */,
+				AFBB2B4E29C8F2DD00F77185 /* BeerDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFBB2B4229C8E91F00F77185 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB2B4A29C8EC3200F77185 /* Beer.swift */,
+				AFBB2B5529C8FF1B00F77185 /* BeerContainer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AFBB2B4329C8E92A00F77185 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB2B4C29C8ECF300F77185 /* BeerListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFBB2B5029C8F3F200F77185 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB2B5129C8F40500F77185 /* BeerListItemSubView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBB2B4D29C8ECF300F77185 /* BeerListController.swift in Sources */,
+				AFBB2B4929C8EA5A00F77185 /* SettingsView.swift in Sources */,
+				AFBB2B4B29C8EC3200F77185 /* Beer.swift in Sources */,
+				AFBB2B5629C8FF1B00F77185 /* BeerContainer.swift in Sources */,
+				AFBB2B4F29C8F2DD00F77185 /* BeerDetailView.swift in Sources */,
+				AFBB2B4729C8EA1400F77185 /* LikedBeersView.swift in Sources */,
+				AFBB2B4529C8E98A00F77185 /* BeerListView.swift in Sources */,
 				AFBB2B3629C8E7E900F77185 /* ContentView.swift in Sources */,
 				AFBB2B3429C8E7E900F77185 /* SolvroAppApp.swift in Sources */,
+				AFBB2B5229C8F40500F77185 /* BeerListItemSubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
